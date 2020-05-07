@@ -16,7 +16,7 @@ export const fetchData = async (country) => {
 
     return { confirmed, recovered, deaths, lastUpdate };
   } catch (err) {
-    console.log(err);
+    throw Error(err);
   }
 };
 
@@ -32,7 +32,7 @@ export const fetchDailyData = async () => {
 
     return modifiedData;
   } catch (err) {
-    console.log(err);
+    throw Error(err);
   }
 };
 
